@@ -1,0 +1,270 @@
+/* Common Styles for all pages of Sakura Hotel Web site */
+/* Note: Refer to grading sheet for details on each of these sections */
+
+/* CSS Final Project by AUSTIN DE LA CRUZ */
+
+@charset "utf-8";
+
+@font-face {
+   font-family: 'sf_shai_fontai';
+   src: url('SF_Shai_Fontai-webfont.woff2') format('woff2'),
+        url('SF_Shai_Fontai-webfont.woff') format('woff');
+   font-weight: normal;
+   font-style: normal;
+
+}
+@font-face {
+	font-family: 'Sf Shai Fontai';
+	src: url('fonts/SF_Shai_Fontai_Distressed-webfont.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'Sf Shai Fontai';
+	src: url('fonts/SF_Shai_Fontai_Extended-webfont.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
+}
+
+
+/* First rule below should probably be left alone. */
+
+header, nav, section, footer, article {     /* leave this alone */
+	display: block;
+}
+
+
+/* 1. Page Styles: On the "body" you must at least set color, background, margin, padding, font family & size.    
+   ==============  Optionally, you can also set styles on the page wrapper div here if you like.  
+	               But note that you will lose points for any of the above properties that are not set for the body  */
+
+#mintro p {
+   border: solid;
+}
+body {
+   color: #330066;
+   font-family: 'Times New Roman', Helvetica, sans-serif;
+   font-size: 100%;
+}
+
+	                
+
+/* 2. Header (Banner) Styles: For the top header area (which includes the h1) and should be treated as a banner area. 
+   =========================  Possible properties to use here include "background", "height", "padding", "margin",     
+                              and "border".  Feel free to use others instead. Use at least 2 properties.           */
+
+header {
+   text-transform: uppercase;
+   margin: 0;
+   padding: 0;
+   color: #ffb3ff;
+   text-shadow: 2px 2px 5px #000000;
+   text-align: center;
+   letter-spacing: 4px;
+   font-size: 40px;
+   font-family: 'sf_shai_fontai';
+}                   
+
+#banner {
+   background-image: url(sakuraheader.png);
+   position: absolute;
+   height: 140px;
+   width: 99%;
+   background-size: auto;
+   background-position: bottom;
+}
+
+
+/* 3. Heading Styles: For h1-h3 together, set font-family and color; for each separately set font-size using em or %.   
+   =================  Set other styles as needed. Goal is to make heading text stand out from other page text.   
+	                  Use text-shadowing on your headings. One of your heading fonts must be an embedded Web font.  */
+	                   
+h2, h3 {
+   font-size: 4em;
+   color: green;
+   text-shadow: 1px 2px 5px gray;
+   font-family: 'sf_shai_fontai';
+   text-align: center;
+   letter-spacing: 8px;
+   margin: 1px;
+}
+
+
+
+/* 4. Intro Paragraph Styles:  use at least 1 property to emphasize 1st paragraph (intro article) 
+   =========================   */
+#intro p {
+   border: solid 2px;
+   text-align: center;
+}
+
+
+
+
+/* 5. Copyright Styles:  use at least 2 properties to de-emphasize the copyright paragraph (footer)  
+   ===================  */
+footer {
+   font-weight: bold;
+   color: gray;
+   font-size: 85%;
+}
+
+
+
+
+/* 6. General Link Styles: Style the links outside the nav bar area using at least color and text-decoration  
+   ======================  Write 4 separate rules to affect all 4 link states.  */
+
+ a {
+   text-decoration: none;
+   font-weight: bold;
+   color: pink;
+   font-family: Helvetica, sans-serif;
+ }
+
+
+
+/* 7. Navigation Bar Styles: Should affect only the nav bar links. Style nav, ul and its li's as needed.           
+   ========================  Style all 4 link states to make active buttons when hovering. Remove bullets from list display. 
+                             Use selectors like "#eventspage #eventslink" to style the link to its own page separately      */ 
+
+nav {
+   background-image: url(cherryblossom.png);
+   background-size: cover;
+   
+}
+
+nav a {
+   color: green;
+   font-weight: bolder;
+   font-size: 22px;
+   text-shadow: 1px 3px 3px yellow;
+   text-decoration: none;
+}
+
+nav ul li {
+   list-style-type: none;
+}
+
+a:hover {
+   color: purple;
+}
+
+
+
+/* 8. General List Styles: For unordered lists outside of nav bar. Set 2 levels of bullet shapes & 2 levels of bullet images. 
+   ======================  Outer bullets should stand out more than inner bullets. Use Reservations & Contact pages to test. */
+
+#payment ul li {
+      list-style-image: url(innerbulletsakura.png);
+   }
+
+#primary li {
+   list-style-image: url(sakura.png);
+}
+
+
+
+
+
+/* 9. Testimonial Styles: At least 4 rules to style at least these 4 items: the surrounding testimonials article,    
+   =====================  the 3 testimonial divs, the quotes, and the speakers. Goals: Uniquely style testimonial section 
+	                       itself, emphasize quote, de-emphasize speaker name. Adjust vertical spacing between items.       */
+
+.quote {
+   font-weight: bold;
+   text-decoration: underline;
+}
+
+.speaker {
+   text-align: right;
+   font-style: italic;
+}
+
+
+
+
+/* 10. Logo Positioning Styles: Absolute Positioning of logo image using "positionme" id. Leave the existing blank div at 
+   ===========================  bottom of each page in the html & style it to go toward the top of pages where you like.  
+	                            Give it a height & width to match logo image, set image as background, position absolutely */
+
+#positionme {
+   background-image: url(sakuralogo.png);
+   position: absolute;
+   width: 400px;
+   height: 400px;
+   right: 1px;
+   bottom: 20px;
+}
+
+
+
+
+/* 11. Multi-Column Layout Styles: Use of float, position, margin, and/or padding styles to create a multi-column layout.  
+   ==============================  For help with these styles, see the online "Final Project Layout Guide" handout.     
+	                               For some partial credit here you can use just the layout styles from A3P5              */
+#pagewrap {
+   display: flex;
+   flex-flow: row wrap;
+   justify-content: space-between;
+}
+
+#pagewrap > * {
+   padding: 10px;
+   box-sizing: border-box;
+}
+
+header {
+   flex: 1 1 100%;
+   height: 150px;
+   background: #57c2f3;
+}
+
+footer {
+   flex: 1 1 100%;
+   height: 130px;
+   text-align: center;
+   background: lightsteelblue;
+}
+
+nav {
+   flex: 2 2 16%;
+}
+
+#main {
+   flex: 7 7 56%;
+   background: #ffff66;
+}
+
+#testimonials {
+   flex: 3 3 24%;
+   background: #ffff00;
+}
+
+
+@media all and (max-width:800px) {
+   nav {
+      flex: 1 1 25%;
+   }
+   #main {
+      flex: 3 3 70%;
+   }
+   #testimonials {
+      flex: 1 1 100%;
+   }
+}
+
+@media all and (max-width:600px) {
+   nav, #main, #testimonials {
+      flex: 1 1 100%;
+   }
+}
+
+/* Miscellaneous Styles: Styles that don't fit in any of the above categories but affect multiple pages can go here. 
+   ====================  Use only as needed. This section is optional and does not count for any points.                 */
+
+#hotelfig figcaption {
+   font-weight: bold;
+   font-size: large;
+   text-align: center;
+}
